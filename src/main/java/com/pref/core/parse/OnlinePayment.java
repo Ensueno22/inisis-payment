@@ -31,6 +31,7 @@ public class OnlinePayment implements Payment {
 
         try {
             ApprovalResponse data = mapper.convertValue(request, ApprovalResponse.class);
+            log.info("data=[{}]", data);
 
             if (data.getResultCode().equals(SUCCESS)) {
                 final String authUrl = data.getAuthUrl();

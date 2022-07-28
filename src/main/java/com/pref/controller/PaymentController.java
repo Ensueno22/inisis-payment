@@ -21,4 +21,9 @@ public class PaymentController {
         service.payInisisPayment(response, false);
     }
 
+    @PostMapping("/inisis/mobile/appl")
+    public void mobileInisisResponse(@RequestParam Map<String, String> response) {
+        
+    }
+
 }
